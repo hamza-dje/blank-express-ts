@@ -5,8 +5,6 @@
     "license": "ISC",
     "author": "hamza-dje",
     "scripts": {
-        "lint": "eslint src --ext .ts",
-        "lint:fix": "eslint src --ext .ts --fix",
         "dev": "nodemon",
         "build": "tsc",
         "start": "node out/server.js"
