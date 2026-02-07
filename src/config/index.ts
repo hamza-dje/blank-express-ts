@@ -1,2 +1,2 @@
-export { ENV } from "./env";
+export { ENV, NODE_ENV } from "./env";
 export { logger } from "./logger";

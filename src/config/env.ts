@@ -2,7 +2,7 @@ import { config } from "dotenv";
 
 config();
 
-enum NODE_ENV {
+export enum NODE_ENV {
     DEV = "development",
     PROD = "production",
 }
@@ -12,10 +12,9 @@ export type Env = {
     PORT: number;
 };
 
-// if (!process.env.NODE_ENV) {
-//     throw new Error("NODE_ENV is missing in .env");
-// } else
-if (
+if (!process.env.NODE_ENV) {
+    throw new Error("NODE_ENV is missing in .env");
+} else if (
     process.env.NODE_ENV !== NODE_ENV.DEV &&
     process.env.NODE_ENV !== NODE_ENV.PROD
 ) {
